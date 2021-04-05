@@ -31,3 +31,6 @@ Remarque : Il ne faudra en aucun cas modifier le nom de ce fichier
 - anime.txt;Anime/
 
 Et maintenant, il suffit d'ouvrir le jeu en .jar pour ainsi profiter du quiz que l'on vient de créer...
+
+# Note :
+Pendant que vous faites un quiz, vous pouvez quitter le jeu en écrivant "exit" dans le champ de texte.
