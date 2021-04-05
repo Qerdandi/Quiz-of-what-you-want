@@ -2,11 +2,11 @@
 Ce jeu est un quiz personnalisable développé en "speed run" sur 48 heures complètes. Il vous permet de créer un ou plusieurs quiz dans un même jeu et de pouvoir mélanger tous les thèmes que vous souhaitez.
 
 # Informations :
-Le jeu a été codé en Javafx sur Intellij en suivante le principe du pattern MVP (modèle présentation vue). Le code source est disponible dans ce repositorie et il est obligatoire de télécharger tout le dossier pour pouvoir l'ouvrir sur Intellij ou tout autre logiciel d'édition de code.
+Le jeu a été codé en Javafx sur Intellij en suivant le principe du pattern MVP (modèle présentation vue). Le code source est disponible dans ce repositorie et il est obligatoire de télécharger tout le dossier pour pouvoir l'ouvrir sur Intellij ou tout autre logiciel d'édition de code.
 Le second dossier "build" contient uniquement le jeu compilé en fichier.jar ainsi que les fichiers textes nécessaires au bon fonctionnement du jeu : c'est sa base de donnée. Si vous souhaitez uniquement jouer ou créer des quiz, vous pouvez n'installer que ce dossier. 
 
 # Prise en main :
-1) Afin de pouvoir personnaliser votre quiz vous devez tout d'abord créer un fichier texte avec le nom de votre thème (c'est plus simple pour la suite). Dans ce fichier, vous allez inscrire chaque réponse les unes en dessous des autres. 
+1) Afin de pouvoir personnaliser votre quiz vous devez tout d'abord créer un fichier texte avec le nom de votre thème (c'est plus simple pour la suite). Dans ce fichier, vous allez inscrire chaque réponse les unes en dessous des autres.
 Remarque : veillez à ne pas laisser d'espace au bout de la réponse, cela fausserait les réponses lors de la pratique du quiz.
 
 2) Installer ensuite les images qui font office de question. c'est images doivent impérativement detenir le même nom que la réponse associée dans le fichier texte créé précédemment. Ces images doivent avoir le format .png ou .jpg pour être prises en charge par le jeu.
