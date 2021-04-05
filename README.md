@@ -34,3 +34,4 @@ Et maintenant, il suffit d'ouvrir le jeu en .jar pour ainsi profiter du quiz que
 
 # Note :
 Pendant que vous faites un quiz, vous pouvez quitter le jeu en écrivant "exit" dans le champ de texte.
+Si vous avez plusieurs thèmes contenant des réponses identiques, une seule des deux ne sera comptabilisée, l'autre sera écrasé lors de la lecture des fichiers.
