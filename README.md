@@ -15,22 +15,18 @@ Remarque : veillez à ne pas laisser d'espace au bout de la réponse, cela fauss
 Remarque : Je vous conseille de mettre chaque groupe d'image associé à un thème dans un dossier propre à ce dernier pour des questions de lisibilité. 
 
 3) Il ne reste plus qu'une seule étape. Ouvrir le fichier texte préinstallé nommé "txtFileAndPath.txt". Dans ce fichier, vous allez inscrire sur chaque ligne le fichier texte du thème contenant la réponse et sur cette même ligne séparée par un point-virgule ";", le chemin menant aux images correspondantes au thème. Le point de départ de ce chemin est là où se trouve le fichier "txtFileAndPath.txt" lui-même.
-
 Remarque : il ne faudra en aucun cas modifier le nom de ce fichier
 
 # Exemple :
 1) Je crée le thème : "anime.txt" qui contient à chaque ligne ma réponse :
-
 steins;gate
 code geass
 
 2) Je crée un dossier dans le répertoire où se trouve mon jeu que j'appelle "Anime" (par exemple) qui contient les questions (images) :
-
 steins;gate.png
 code geass.jpg
 
 3) J'ouvre le fichier "txtFileAndPath.txt" et je complète une ligne par thème (dans mon cas, je n'ai qu'un seul thème) :
-
 anime.txt;Anime/
 
 Et maintenant, il suffit d'ouvrir le jeu en .jar pour ainsi profiter du quiz que l'on vient de créer...
