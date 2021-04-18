@@ -14,7 +14,7 @@ Note: Be careful not to leave a space at the end of the answer, this will falsif
 
 Note: I advise you to put each image group in a specific theme folder for reasons of readability.
 
-3) There is only one step left. Open the preinstalled text file named "txtFileAndPath.txt". In this file, you will write on each line the text file of the theme containing the answer and on this same line separated by a semicolon ";", the path leading to the images corresponding to the theme. The starting point of this path is where the "txtFileAndPath.txt" file itself is located. If you have several themes and if you don't want to add them during next game, you will just have to go to this same file and write two dollars "$$" in front of the line that you do not want to use.
+3) There is only one step left. Open the preinstalled text file named "txtFileAndPath.txt". In this file, you will write on each line the text file of the theme containing the answer and on this same line separated by a semicolon ";", the path leading to the images corresponding to the theme. The starting point of this path is where the "txtFileAndPath.txt" file itself is located. If you have several themes and if you don't want to add them during next game, you just have to go to this same file and write two dollars "$$" in front of the line that you do not want to use.
 
 Note: Under no circumstances should the name of this file be changed.
 
