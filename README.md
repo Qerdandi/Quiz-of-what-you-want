@@ -8,7 +8,7 @@ The second "build" folder contains only the game compiled as a .jar file and all
 # Getting started:
 1) In order to be able to customize your quiz, you must first create a text file with the name of your theme (it's easier later). In this file, you will write each answer one below the other.
 
-Note: Be careful not to leave a space at the end of the answer, this will falsify answers during the practice of the quiz.
+Note: Be careful not to leave a space at the end of the answer, this will falsify answers during the game.
 
 2) Then install images that serve as questions. These images must imperatively have the same name as the associated answer in the text file created previously. These images must be in .png or .jpg format to be supported by the game.
 
