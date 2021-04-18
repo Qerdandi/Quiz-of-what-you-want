@@ -1,37 +1,37 @@
 # Quiz-of-what-you-want
-Ce jeu est un quiz personnalisable développé en "speed run" sur 48 heures complètes. Il vous permet de créer un ou plusieurs quiz dans un même jeu et de pouvoir mélanger tous les thèmes que vous souhaitez.
+This game is a customizable quiz developed in "speed run" over 48 hours. It allows you to create one or more quizzes in a same game and to be able to mix all themes you want.
 
-# Informations :
-Le jeu a été codé en Javafx sur Intellij en suivant le principe du pattern MVP (modèle présentation vue). Le code source est disponible dans ce repositorie et il est obligatoire de télécharger tout le dossier pour pouvoir l'ouvrir sur Intellij ou tout autre logiciel d'édition de code.
-Le second dossier "build" contient uniquement le jeu compilé en fichier.jar ainsi que les fichiers textes nécessaires au bon fonctionnement du jeu : c'est sa base de donnée. Si vous souhaitez uniquement jouer ou créer des quiz, vous pouvez n'installer que ce dossier. 
+# Information:
+The game was coded in JavaFx on IntelliJ following the principle of the MVP pattern (model view presentation). The source code is available in this repository and you must download the whole file to be able to open it on IntelliJ or any other code editing software.
+The second "build" folder contains only the game compiled as a .jar file and all text files are necessary for the game: this is its database. If you only want to play or create quizzes, you can install only this folder.
 
-# Prise en main :
-1) Afin de pouvoir personnaliser votre quiz vous devez tout d'abord créer un fichier texte avec le nom de votre thème (c'est plus simple pour la suite). Dans ce fichier, vous allez inscrire chaque réponse les unes en dessous des autres.
+# Getting started:
+1) In order to be able to customize your quiz, you must first create a text file with the name of your theme (it's easier later). In this file, you will write each answer one below the other.
 
-Remarque : Veillez à ne pas laisser d'espace au bout de la réponse, cela fausserait les réponses lors de la pratique du quiz.
+Note: Be careful not to leave a space at the end of the answer, this will falsify answers during the practice of the quiz.
 
-2) Installer ensuite les images qui font office de question. c'est images doivent impérativement detenir le même nom que la réponse associée dans le fichier texte créé précédemment. Ces images doivent avoir le format .png ou .jpg pour être prises en charge par le jeu.
+2) Then install images that serve as questions. These images must imperatively have the same name as the associated answer in the text file created previously. These images must be in .png or .jpg format to be supported by the game.
 
-Remarque : Je vous conseille de mettre chaque groupe d'image associé à un thème dans un dossier propre à ce dernier pour des questions de lisibilité. 
+Note: I advise you to put each image group in a specific theme folder for reasons of readability.
 
-3) Il ne reste plus qu'une seule étape. Ouvrir le fichier texte préinstallé nommé "txtFileAndPath.txt". Dans ce fichier, vous allez inscrire sur chaque ligne le fichier texte du thème contenant la réponse et sur cette même ligne séparée par un point-virgule ";", le chemin menant aux images correspondantes au thème. Le point de départ de ce chemin est là où se trouve le fichier "txtFileAndPath.txt" lui-même. Par la suite, si vous avez plusieurs thèmes, si vous souhaitez ne pas en prendre en compte pour votre prochaine partie, il vous suffira d'aller dans ce même fichier et d'écrire deux dollars "$$" devant la ligne que vous ne souhaitez pas utiliser.
+3) There is only one step left. Open the preinstalled text file named "txtFileAndPath.txt". In this file, you will write on each line the text file of the theme containing the answer and on this same line separated by a semicolon ";", the path leading to the images corresponding to the theme. The starting point of this path is where the "txtFileAndPath.txt" file itself is located. If you have several themes and if you don't want to add them during next game, you will just have to go to this same file and write two dollars "$$" in front of the line that you do not want to use.
 
-Remarque : Il ne faudra en aucun cas modifier le nom de ce fichier
+Note: Under no circumstances should the name of this file be changed.
 
-# Exemple :
-1) Je crée le thème : "anime.txt" qui contient à chaque ligne ma réponse :
-- steins;gate
+# Example:
+1) I create the theme: "anime.txt" which contains my answer on each line:
+- steins; gate
 - code geass
 
-2) Je crée un dossier dans le répertoire où se trouve mon jeu que j'appelle "Anime" (par exemple) qui contient les questions (images) :
-- steins;gate.png
+2) I create a folder in the directory where my game is located that I call "Anime" (for example) which contains questions (images):
+- steins; gate.png
 - code geass.jpg
 
-3) J'ouvre le fichier "txtFileAndPath.txt" et je complète une ligne par thème (dans mon cas, je n'ai qu'un seul thème) :
-- anime.txt;Anime/
+3) I open the "txtFileAndPath.txt" file and complete one line per theme (in my case, I only have one theme):
+- anime.txt; Anime/
 
-Et maintenant, il suffit d'ouvrir le jeu en .jar pour ainsi profiter du quiz que l'on vient de créer...
+And now, just open the game in .jar to enjoy the quiz we just created ...
 
-# Notes :
-1) Pendant que vous faites un quiz, vous pouvez quitter le jeu en écrivant "exit" dans le champ de texte.
-2) Si vous avez plusieurs thèmes contenant des réponses identiques, une seule des deux ne sera comptabilisée, l'autre sera écrasé lors de la lecture des fichiers.
+# Notes:
+1) While doing a quiz, you can exit the game by writing "exit" in the text field.
+2) If you have several topics containing identical answers, only one of the two will be counted, the other will be overwritten when reading the files.
