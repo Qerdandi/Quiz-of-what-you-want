@@ -1,15 +1,19 @@
 package com.company;
 
+import com.sun.xml.internal.ws.assembler.jaxws.TerminalTubeFactory;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToolBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import java.io.File;
@@ -25,27 +29,25 @@ public class Vue{
     private Scene sceneGame;
     private Label scoreLabel;
     private ImageView currentImage;
-    private int xScreen;
+    private int xScreen, yScreen;
     private TextField textField;
     private Label answer;
     private Text time;
 
     public Vue(Presentation presentation){
         this.presentation = presentation;
-        double xTextField = 400;
-        textField = new TextField();
 
         //Screen size
         Screen screen = Screen.getPrimary();
         xScreen = (int) screen.getBounds().getWidth();
-        int yScreen = (int) screen.getBounds().getHeight();
+        yScreen = (int) screen.getBounds().getHeight();
 
         //Game title
         Label titre = new Label("Quiz of what you want");
-        titre.setStyle("-fx-font: 100 Verdana; -fx-text-fill: YELLOW; -fx-font-weight: bold;");
-        titre.setPrefSize(xScreen,50);
-        titre.setLayoutX(xScreen/6.5);
-        titre.setLayoutY(yScreen /8.0);
+        titre.setStyle("-fx-font: 72 Verdana; -fx-text-fill: YELLOW; -fx-font-weight: bold;");
+        titre.setPrefSize(950,50);
+        titre.setLayoutX(xScreen/2.0-titre.getPrefWidth()/2.0);
+        titre.setLayoutY(yScreen/4.0-titre.getPrefHeight()/2.0);
 
         //Button start
         Button start = new Button("Start the Quiz");
@@ -53,24 +55,24 @@ public class Vue{
         start.setId("start");
         start.setPrefSize(400,20);
         start.setLayoutX(xScreen/2.0-start.getPrefWidth()/2.0);
-        start.setLayoutY(yScreen /2.0-start.getPrefHeight()/2.0);
+        start.setLayoutY(yScreen/2.0-start.getPrefHeight()/2.0);
 
         //Champ Text
+        textField = new TextField();
+        double xTextField = 400;
         textField.setPrefSize(xTextField,xTextField/10);
 
         //Score label
         scoreLabel = new Label("Score : 0");
-        scoreLabel.setStyle("-fx-font-weight: bold; -fx-font: 36 Verdana;");
+        scoreLabel.setStyle("-fx-font-weight: bold; -fx-font: 28 Verdana;");
 
         //Mistake label
         mistakeLabel = new Label("Mistakes : 0");
-        mistakeLabel.setStyle("-fx-font-weight: bold; -fx-font: 36 Verdana;");
+        mistakeLabel.setStyle("-fx-font-weight: bold; -fx-font: 28 Verdana;");
 
         //Time
         time = new Text("0");
-        time.setStyle("-fx-font-weight: bold; -fx-font: 36 Verdana;");
-        time.setX(xScreen/10.0);
-        time.setY(yScreen -140);
+        time.setStyle("-fx-font-weight: bold; -fx-font: 28 Verdana;");
 
         Button showButton = new Button("Show answer");
         showButton.setStyle("-fx-font-weight: bold; -fx-font: 20 Verdana; -fx-color : RED");
@@ -84,7 +86,7 @@ public class Vue{
         paneGame.setStyle("-fx-background-color: #8A62C6;");
 
         gameFlowPane = new FlowPane();
-        gameFlowPane.setHgap(40);
+        gameFlowPane.setHgap(20);
         FlowPane.setMargin(time, new Insets(10, 0, 10, 20));
         gameFlowPane.getChildren().addAll(time, textField, scoreLabel, mistakeLabel, showButton);
 
@@ -101,7 +103,7 @@ public class Vue{
         fenetre.setTitle("Quiz of what you want");
         fenetre.setScene(sceneMenu);
         fenetre.setMaximized(true);
-        fenetre.setResizable(true);
+        fenetre.setResizable(false);
         fenetre.show();
 
         //Evenements
@@ -146,16 +148,16 @@ public class Vue{
         currentImage = createImageView(path);
         double xOrigin = currentImage.getBoundsInLocal().getWidth();
         double yOrigin = currentImage.getBoundsInLocal().getHeight();
-        currentImage.setFitHeight(800);
-        currentImage.setFitWidth(800*xOrigin/yOrigin);
+        currentImage.setFitHeight(yScreen/1.5);
+        currentImage.setFitWidth(currentImage.getFitHeight()*xOrigin/yOrigin);
         currentImage.setX(xScreen/2.0 - currentImage.getBoundsInLocal().getWidth()/2.0);
-        currentImage.setY(55);
+        currentImage.setY(50);
         paneGame.getChildren().add(currentImage);
     }
 
     public void setUpEndText(){
         Label gameOver = new Label("Congratulation !");
-        gameOver.setStyle("-fx-font-weight: bold; -fx-font: 36 Verdana;");
+        gameOver.setStyle("-fx-font-weight: bold; -fx-font: 28 Verdana;");
         gameFlowPane.getChildren().add(gameOver);
     }
 
@@ -163,8 +165,8 @@ public class Vue{
         gameFlowPane.getChildren().remove(answer);
         answer = new Label(imagePath.replace(".png","")
                                     .replace(".jpg","")
-                                    .replace("/"," : ").toUpperCase());
-        answer.setStyle("-fx-font-weight: bold; -fx-font: 24 Verdana;");
+                                    .replace("/"," : ").toLowerCase());
+        answer.setStyle("-fx-font-weight: bold; -fx-font: 28 Verdana;");
     }
 
     public void incrementTime(int second, int minute) {
