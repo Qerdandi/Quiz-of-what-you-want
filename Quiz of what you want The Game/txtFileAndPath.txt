@@ -1,0 +1,3 @@
+$$hiragana.txt;Hiragana/
+$$katakana.txt;Katakana/
+anime.txt;Anime/
