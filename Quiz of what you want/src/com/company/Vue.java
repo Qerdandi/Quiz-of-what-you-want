@@ -45,7 +45,7 @@ public class Vue{
         //Game title
         Label titre = new Label("Quiz of what you want");
         titre.setStyle("-fx-font: 72 Verdana; -fx-text-fill: YELLOW; -fx-font-weight: bold;");
-        titre.setPrefSize(950,50);
+        titre.setPrefSize(950,96);
         titre.setLayoutX(xScreen/2.0-titre.getPrefWidth()/2.0);
         titre.setLayoutY(yScreen/4.0-titre.getPrefHeight()/2.0);
 
