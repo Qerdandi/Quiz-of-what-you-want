@@ -4,9 +4,9 @@ public class Main {
 
     public static void main(String[] strings)
     {
-        Modele modele = new Modele();
-        Presentation presentation = new Presentation(modele);
-        Vue vue = new Vue(presentation);
-        presentation.associerVue(vue);
+        Model model = new Model();
+        Presentation presentation = new Presentation(model);
+        Vew vew = new Vew(presentation);
+        presentation.associateVue(vew);
     }
 }

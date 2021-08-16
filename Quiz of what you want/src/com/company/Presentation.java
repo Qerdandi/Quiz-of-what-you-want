@@ -6,28 +6,28 @@ import javafx.event.EventHandler;
 import javafx.scene.control.TextField;
 
 public class Presentation implements EventHandler<ActionEvent> {
-    private Modele modele;
-    private Vue vue;
+    private Model model;
+    private Vew vew;
     private AnimationTimer animationTimer;
     private int timeValue;
     private int second;
     private int minute;
 
-    public Presentation(Modele modele){
+    public Presentation(Model model){
         second = 0;
         minute = 0;
-        this.modele = modele;
+        this.model = model;
     }
 
     public void handle(ActionEvent event){
         TextField textField = (TextField) event.getSource();
 
         if (!textField.getText().equalsIgnoreCase("")){
-            if(modele.validateEntry(textField.getText())){
-                vue.actualizeScore();
-                vue.changeImageView();
+            if(model.validateEntry(textField.getText())){
+                vew.actualizeScore();
+                vew.changeImageView();
             }else{
-                vue.actualizeScore();
+                vew.actualizeScore();
             }
         }
     }
@@ -43,19 +43,19 @@ public class Presentation implements EventHandler<ActionEvent> {
                         second = 0;
                         minute++;
                     }
-                    vue.incrementTime(second, minute);
+                    vew.incrementTime(second, minute);
                 }
             }
         };
         animationTimer.start();
     }
 
-    public int getScore(){ return modele.getScore(); }
+    public int getScore(){ return model.getScore(); }
 
-    public void associerVue(Vue vue){ this.vue = vue; }
+    public void associateVue(Vew vew){ this.vew = vew; }
 
     public String randomImagePath() {
-        String imagePath = modele.randomImagePath();
+        String imagePath = model.randomImagePath();
         if (imagePath.equals("Game Over")){
             animationTimer.stop();
         }
@@ -63,15 +63,15 @@ public class Presentation implements EventHandler<ActionEvent> {
     }
 
     public void initializeGame(){
-        String imagePath = modele.randomImagePath();
+        String imagePath = model.randomImagePath();
         timeStart();
-        vue.setUpImageView(imagePath);
-        vue.showAnswer(imagePath);
+        vew.setUpImageView(imagePath);
+        vew.showAnswer(imagePath);
     }
 
-    public void lostPoint() { modele.decrementScore(); }
+    public void lostPoint() { model.decrementScore(); }
 
-    public int returnScoreMax(){ return modele.returnScoreMax(); }
+    public int returnScoreMax(){ return model.returnScoreMax(); }
 
-    public int getMistakes() { return modele.getMistakes(); }
+    public int getMistakes() { return model.getMistakes(); }
 }
