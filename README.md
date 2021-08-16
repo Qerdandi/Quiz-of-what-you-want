@@ -1,11 +1,12 @@
 # Quiz-of-what-you-want
+## Context:
 This game is a customizable quiz developed in "speed run" over 48 hours. It allows you to create one or more quizzes in a same game and to be able to mix all themes you want.
 
-# Information:
+## Information:
 The game was coded in JavaFx on IntelliJ following the principle of the MVP pattern (model view presentation). The source code is available in this repository and you must download the whole file to be able to open it on IntelliJ or any other code editing software.
 The second "The Game" folder contains only the game compiled and builed as a .jar file and all text files are necessary for the game: this is its database. If you only want to play or create quizzes, you can only install this folder.
 
-# Getting started:
+## Getting started:
 1) In order to be able to customize your quiz, you must first create a text file with the name of your theme (it's easier later). In this file, you will write each answer one below the other.
 
 Note: Be careful not to leave a space at the end of the answer, this will falsify answers during the game.
@@ -18,7 +19,7 @@ Note: I advise you to put each image group in a specific theme folder for reason
 
 Note: Under no circumstances should the name of this file be changed.
 
-# Example:
+## Example:
 1) I create the theme: "anime.txt" which contains my answer on each line:
 - steins;gate
 - code geass
@@ -32,6 +33,10 @@ Note: Under no circumstances should the name of this file be changed.
 
 And now, just open the game in .jar to enjoy the quiz we just created ...
 
-# Notes:
+## Notes:
 1) While doing a quiz, you can exit the game by writing "exit" in the text field.
 2) If you have several topics containing identical answers, only one of the two will be counted, the other will be overwritten when reading the files.
+
+## State:
+- [ ] Work in progress
+- [x] Work completed
