@@ -3,7 +3,7 @@ This game is a customizable quiz developed in "speed run" over 48 hours. It allo
 
 # Information:
 The game was coded in JavaFx on IntelliJ following the principle of the MVP pattern (model view presentation). The source code is available in this repository and you must download the whole file to be able to open it on IntelliJ or any other code editing software.
-The second "build" folder contains only the game compiled as a .jar file and all text files are necessary for the game: this is its database. If you only want to play or create quizzes, you can only install this folder.
+The second "The Game" folder contains only the game compiled and builed as a .jar file and all text files are necessary for the game: this is its database. If you only want to play or create quizzes, you can only install this folder.
 
 # Getting started:
 1) In order to be able to customize your quiz, you must first create a text file with the name of your theme (it's easier later). In this file, you will write each answer one below the other.
