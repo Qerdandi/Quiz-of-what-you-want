@@ -21,12 +21,12 @@ Note: Under no circumstances should the name of this file be changed.
 
 ## Example:
 1) I create the theme: "anime.txt" which contains my answer on each line:
-- steins;gate
-- code geass
+- anime_1
+- anime_2
 
 2) I create a folder in the directory where my game is located that I call "Anime" (for example) which contains questions (images):
-- steins;gate.png
-- code geass.jpg
+- anime_1.png
+- anime_2.jpg
 
 3) I open the "txtFileAndPath.txt" file and complete one line per theme (in my case, I only have one theme):
 - anime.txt;Anime/
