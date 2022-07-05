@@ -1,1 +1,2 @@
-anime.txt;Anime/
+hiragana.txt;Hiragana/
+$$katakana.txt;Katakana/
