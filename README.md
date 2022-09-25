@@ -2,6 +2,10 @@
 ## Context:
 This game is a customizable quiz developed in "speed run" over 48 hours. It allows you to create one or more quizzes in a same game and to be able to mix all themes you want.
 
+<p align="center">
+  <img alt="quiz" src="https://user-images.githubusercontent.com/73184884/192123887-68aba1d5-edf8-48b7-97d5-ddd589d8a823.jpg" width="720"/>
+</p>
+
 ## Information:
 The game was coded in JavaFx on IntelliJ following the principle of the MVP pattern (model view presentation). The source code is available in this repository and you must download the whole file to be able to open it on IntelliJ or any other code editing software.
 The second "The Game" folder contains only the game compiled and builed as a .jar file and all text files are necessary for the game: this is its database. If you only want to play or create quizzes, you can only install this folder.
