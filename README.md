@@ -1,6 +1,6 @@
 # Quiz-of-what-you-want
 ## Context:
-This game is a customizable quiz developed in "speed run" over 48 hours. It allows you to create one or more quizzes in a same game and to be able to mix all themes you want.
+This game is a customizable quiz developed in "speed run" over 48 hours. It allows you to create one or more quizzes in a same game and to be able to mix all themes you want. The principle is based on a question in image format and the answer in the textfield format.
 
 <p align="center">
   <img alt="quiz" src="https://user-images.githubusercontent.com/73184884/192123887-68aba1d5-edf8-48b7-97d5-ddd589d8a823.jpg" width="720"/>
