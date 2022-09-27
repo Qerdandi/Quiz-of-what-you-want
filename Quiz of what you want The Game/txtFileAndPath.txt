@@ -1,2 +1,0 @@
-hiragana.txt;Hiragana/
-$$katakana.txt;Katakana/
